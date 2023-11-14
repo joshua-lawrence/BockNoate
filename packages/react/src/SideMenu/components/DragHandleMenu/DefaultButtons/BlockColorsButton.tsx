@@ -15,7 +15,7 @@ export const BlockColorsButton = <BSchema extends BlockSchema>(
 
   const { ref, updateMaxHeight } = usePreventMenuOverflow();
 
-  const menuCloseTimer = useRef<NodeJS.Timeout | undefined>();
+  const menuCloseTimer = useRef<number | undefined>();
 
   const startMenuCloseTimer = useCallback(() => {
     if (menuCloseTimer.current) {

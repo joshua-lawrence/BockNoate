@@ -1,4 +1,4 @@
-import { Theme } from "./index";
+import { BlocknoteTheme } from "./index";
 
 export const defaultColorScheme = [
   "#FFFFFF",
@@ -13,7 +13,7 @@ export const defaultColorScheme = [
   "#000000",
 ];
 
-export const lightDefaultTheme: Theme = {
+export const lightDefaultTheme: BlocknoteTheme = {
   colors: {
     editor: {
       text: defaultColorScheme[5],
@@ -86,7 +86,7 @@ export const lightDefaultTheme: Theme = {
     '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
 };
 
-export const darkDefaultTheme: Theme = {
+export const darkDefaultTheme: BlocknoteTheme = {
   colors: {
     editor: {
       text: defaultColorScheme[2],

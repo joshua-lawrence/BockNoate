@@ -3,7 +3,7 @@ import { createStyles, MantineProvider } from "@mantine/core";
 import { EditorContent } from "@tiptap/react";
 import { HTMLAttributes, ReactNode, useMemo } from "react";
 import usePrefersColorScheme from "use-prefers-color-scheme";
-import { blockNoteToMantineTheme, Theme } from "./BlockNoteTheme";
+import { blockNoteToMantineTheme, BlocknoteTheme } from "./BlockNoteTheme";
 import { FormattingToolbarPositioner } from "./FormattingToolbar/components/FormattingToolbarPositioner";
 import { HyperlinkToolbarPositioner } from "./HyperlinkToolbar/components/HyperlinkToolbarPositioner";
 import { SideMenuPositioner } from "./SideMenu/components/SideMenuPositioner";
@@ -48,10 +48,10 @@ export function BlockNoteView<BSchema extends BlockSchema>(
     theme?:
       | "light"
       | "dark"
-      | Theme
+      | BlocknoteTheme
       | {
-          light: Theme;
-          dark: Theme;
+          light: BlocknoteTheme;
+          dark: BlocknoteTheme;
         };
     children?: ReactNode;
   } & HTMLAttributes<HTMLDivElement>

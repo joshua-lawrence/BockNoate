@@ -52,46 +52,51 @@ export type ComponentStyles = Partial<{
   SideMenu: CSSObject;
 }>;
 
-export type Theme = {
+export type BlocknoteTheme = {
   colors: ColorScheme;
   borderRadius: number;
   fontFamily: string;
-  componentStyles?: (theme: Theme) => ComponentStyles;
+  componentStyles?: (theme: BlocknoteTheme) => ComponentStyles;
 };
 
-export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
-  const shadow = `0 4px 12px ${theme.colors.shadow}`;
-  const border = `1px solid ${theme.colors.border}`;
+export const blockNoteToMantineTheme = (
+  blocknoteTheme: BlocknoteTheme
+): MantineThemeOverride => {
+  const shadow = `0 4px 12px ${blocknoteTheme.colors.shadow}`;
+  const border = `1px solid ${blocknoteTheme.colors.border}`;
 
   const textColors = {
-    default: theme.colors.editor.text,
-    gray: theme.colors.highlightColors.gray.text,
-    brown: theme.colors.highlightColors.brown.text,
-    red: theme.colors.highlightColors.red.text,
-    orange: theme.colors.highlightColors.orange.text,
-    yellow: theme.colors.highlightColors.yellow.text,
-    green: theme.colors.highlightColors.green.text,
-    blue: theme.colors.highlightColors.blue.text,
-    purple: theme.colors.highlightColors.purple.text,
-    pink: theme.colors.highlightColors.pink.text,
+    default: blocknoteTheme.colors.editor.text,
+    gray: blocknoteTheme.colors.highlightColors.gray.text,
+    brown: blocknoteTheme.colors.highlightColors.brown.text,
+    red: blocknoteTheme.colors.highlightColors.red.text,
+    orange: blocknoteTheme.colors.highlightColors.orange.text,
+    yellow: blocknoteTheme.colors.highlightColors.yellow.text,
+    green: blocknoteTheme.colors.highlightColors.green.text,
+    blue: blocknoteTheme.colors.highlightColors.blue.text,
+    purple: blocknoteTheme.colors.highlightColors.purple.text,
+    pink: blocknoteTheme.colors.highlightColors.pink.text,
   };
 
   const backgroundColors = {
-    default: theme.colors.editor.background,
-    gray: theme.colors.highlightColors.gray.background,
-    brown: theme.colors.highlightColors.brown.background,
-    red: theme.colors.highlightColors.red.background,
-    orange: theme.colors.highlightColors.orange.background,
-    yellow: theme.colors.highlightColors.yellow.background,
-    green: theme.colors.highlightColors.green.background,
-    blue: theme.colors.highlightColors.blue.background,
-    purple: theme.colors.highlightColors.purple.background,
-    pink: theme.colors.highlightColors.pink.background,
+    default: blocknoteTheme.colors.editor.background,
+    gray: blocknoteTheme.colors.highlightColors.gray.background,
+    brown: blocknoteTheme.colors.highlightColors.brown.background,
+    red: blocknoteTheme.colors.highlightColors.red.background,
+    orange: blocknoteTheme.colors.highlightColors.orange.background,
+    yellow: blocknoteTheme.colors.highlightColors.yellow.background,
+    green: blocknoteTheme.colors.highlightColors.green.background,
+    blue: blocknoteTheme.colors.highlightColors.blue.background,
+    purple: blocknoteTheme.colors.highlightColors.purple.background,
+    pink: blocknoteTheme.colors.highlightColors.pink.background,
   };
 
-  const editorBorderRadius = `${Math.max(theme.borderRadius + 2, 1)}px`;
-  const outerBorderRadius = `${theme.borderRadius}px`;
-  const innerBorderRadius = `${Math.max(theme.borderRadius - 2, 1)}px`;
+  const editorBorderRadius = `${Math.max(
+    blocknoteTheme.borderRadius + 2,
+    1
+  )}px`;
+  const outerBorderRadius = `${blocknoteTheme.borderRadius}px`;
+  const innerBorderRadius = `${Math.max(blocknoteTheme.borderRadius - 2, 1)}px`;
 
   return {
     activeStyles: {
@@ -104,30 +109,30 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
         styles: () => ({
           dropdown: _.merge<CSSObject, CSSObject>(
             {
-              backgroundColor: theme.colors.menu.background,
+              backgroundColor: blocknoteTheme.colors.menu.background,
               border: border,
               borderRadius: outerBorderRadius,
               boxShadow: shadow,
-              color: theme.colors.menu.text,
+              color: blocknoteTheme.colors.menu.text,
               padding: "2px",
               overflowY: "scroll",
               ".mantine-Menu-label": {
-                backgroundColor: theme.colors.menu.background,
-                color: theme.colors.menu.text,
+                backgroundColor: blocknoteTheme.colors.menu.background,
+                color: blocknoteTheme.colors.menu.text,
               },
               ".mantine-Menu-item": {
-                backgroundColor: theme.colors.menu.background,
+                backgroundColor: blocknoteTheme.colors.menu.background,
                 border: "none",
                 borderRadius: innerBorderRadius,
-                color: theme.colors.menu.text,
+                color: blocknoteTheme.colors.menu.text,
               },
               ".mantine-Menu-item[data-hovered]": {
-                backgroundColor: theme.colors.hovered.background,
+                backgroundColor: blocknoteTheme.colors.hovered.background,
                 border: "none",
-                color: theme.colors.hovered.text,
+                color: blocknoteTheme.colors.hovered.text,
               },
             },
-            theme.componentStyles?.(theme).Menu || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).Menu || {}
           ),
         }),
       },
@@ -136,47 +141,48 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
           root: _.merge<CSSObject, CSSObject>(
             {
               width: "100%",
-              backgroundColor: theme.colors.menu.background,
+              backgroundColor: blocknoteTheme.colors.menu.background,
             },
-            theme.componentStyles?.(theme).Tabs || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).Tabs || {}
           ),
           tabsList: {
-            borderColor: theme.colors.hovered.background,
+            borderColor: blocknoteTheme.colors.hovered.background,
           },
           tab: {
-            color: theme.colors.menu.text,
-            borderColor: theme.colors.hovered.background,
+            color: blocknoteTheme.colors.menu.text,
+            borderColor: blocknoteTheme.colors.hovered.background,
             "&:hover": {
-              color: theme.colors.hovered.text,
-              backgroundColor: theme.colors.hovered.background,
-              borderColor: theme.colors.hovered.background,
+              color: blocknoteTheme.colors.hovered.text,
+              backgroundColor: blocknoteTheme.colors.hovered.background,
+              borderColor: blocknoteTheme.colors.hovered.background,
             },
             "&[data-active], &[data-active]&:hover": {
-              color: theme.colors.menu.text,
-              borderColor: theme.colors.menu.text,
+              color: blocknoteTheme.colors.menu.text,
+              borderColor: blocknoteTheme.colors.menu.text,
             },
           },
           panel: {
             padding: "8px",
             ".mantine-UnstyledButton-root": {
               width: "60%",
-              border: `solid ${theme.colors.border} 1px`,
+              border: `solid ${blocknoteTheme.colors.border} 1px`,
               borderRadius: "4px",
               height: "32px",
             },
             ".mantine-UnstyledButton-root:hover": {
-              color: theme.colors.hovered.text,
-              backgroundColor: theme.colors.hovered.background,
+              color: blocknoteTheme.colors.hovered.text,
+              backgroundColor: blocknoteTheme.colors.hovered.background,
             },
           },
         }),
       },
       FileInput: {
         styles: () => ({
-          root: theme.componentStyles?.(theme).FileInput || {},
+          root:
+            blocknoteTheme.componentStyles?.(blocknoteTheme).FileInput || {},
           input: {
-            color: theme.colors.menu.text,
-            backgroundColor: theme.colors.menu.background,
+            color: blocknoteTheme.colors.menu.text,
+            backgroundColor: blocknoteTheme.colors.menu.background,
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
@@ -184,26 +190,27 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
             border: "none",
             borderRadius: "4px",
             "&:hover": {
-              backgroundColor: theme.colors.hovered.background,
+              backgroundColor: blocknoteTheme.colors.hovered.background,
             },
           },
           wrapper: {
-            border: `solid ${theme.colors.border} 1px`,
+            border: `solid ${blocknoteTheme.colors.border} 1px`,
             borderRadius: "4px",
           },
           placeholder: {
-            color: `${theme.colors.menu.text} !important`,
+            color: `${blocknoteTheme.colors.menu.text} !important`,
             fontWeight: 600,
           },
         }),
       },
       TextInput: {
         styles: () => ({
-          root: theme.componentStyles?.(theme).TextInput || {},
+          root:
+            blocknoteTheme.componentStyles?.(blocknoteTheme).TextInput || {},
           input: {
-            color: theme.colors.menu.text,
-            backgroundColor: theme.colors.menu.background,
-            border: `solid ${theme.colors.border} 1px`,
+            color: blocknoteTheme.colors.menu.text,
+            backgroundColor: blocknoteTheme.colors.menu.background,
+            border: `solid ${blocknoteTheme.colors.border} 1px`,
             borderRadius: "4px",
             height: "32px",
           },
@@ -216,7 +223,7 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
               border: border,
               borderRadius: innerBorderRadius,
             },
-            theme.componentStyles?.(theme).ColorIcon || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).ColorIcon || {}
           ),
         }),
       },
@@ -229,7 +236,8 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
                 height: "30px",
               },
             },
-            theme.componentStyles?.(theme).DragHandleMenu || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).DragHandleMenu ||
+              {}
           ),
         }),
       },
@@ -238,22 +246,22 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
           root: _.merge<CSSObject, CSSObject>(
             {
               ".ProseMirror": {
-                backgroundColor: theme.colors.editor.background,
+                backgroundColor: blocknoteTheme.colors.editor.background,
                 borderRadius: editorBorderRadius,
-                color: theme.colors.editor.text,
-                fontFamily: theme.fontFamily,
+                color: blocknoteTheme.colors.editor.text,
+                fontFamily: blocknoteTheme.fontFamily,
               },
               // Placeholders
               [`.${blockStyles.isEmpty} .${blockStyles.inlineContent}:before, .${blockStyles.isFilter} .${blockStyles.inlineContent}:before`]:
                 {
-                  color: theme.colors.sideMenu,
+                  color: blocknoteTheme.colors.sideMenu,
                 },
               // Indent lines
               [`.${blockStyles.blockGroup}`]: {
                 [`.${blockStyles.blockGroup}`]: {
                   [`.${blockStyles.blockOuter}:not([data-prev-depth-changed])::before`]:
                     {
-                      borderLeft: `1px solid ${theme.colors.sideMenu}`,
+                      borderLeft: `1px solid ${blocknoteTheme.colors.sideMenu}`,
                     },
                 },
               },
@@ -272,7 +280,7 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
                 ])
               ) as CSSObject),
             },
-            theme.componentStyles?.(theme).Editor || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).Editor || {}
           ),
         }),
       },
@@ -280,7 +288,7 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
         styles: () => ({
           root: _.merge<CSSObject, CSSObject>(
             {
-              backgroundColor: theme.colors.menu.background,
+              backgroundColor: blocknoteTheme.colors.menu.background,
               boxShadow: shadow,
               border: border,
               borderRadius: outerBorderRadius,
@@ -290,30 +298,30 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
               width: "fit-content",
               // Button (including dropdown target)
               ".mantine-Button-root, .mantine-ActionIcon-root": {
-                backgroundColor: theme.colors.menu.background,
+                backgroundColor: blocknoteTheme.colors.menu.background,
                 border: "none",
                 borderRadius: innerBorderRadius,
-                color: theme.colors.menu.text,
+                color: blocknoteTheme.colors.menu.text,
               },
               // Hovered button
               ".mantine-Button-root:hover, .mantine-ActionIcon-root:hover": {
-                backgroundColor: theme.colors.hovered.background,
+                backgroundColor: blocknoteTheme.colors.hovered.background,
                 border: "none",
-                color: theme.colors.hovered.text,
+                color: blocknoteTheme.colors.hovered.text,
               },
               // Selected button
               ".mantine-Button-root[data-selected], .mantine-ActionIcon-root[data-selected]":
                 {
-                  backgroundColor: theme.colors.selected.background,
+                  backgroundColor: blocknoteTheme.colors.selected.background,
                   border: "none",
-                  color: theme.colors.selected.text,
+                  color: blocknoteTheme.colors.selected.text,
                 },
               // Disabled button
               ".mantine-Button-root[data-disabled], .mantine-ActionIcon-root[data-disabled]":
                 {
-                  backgroundColor: theme.colors.disabled.background,
+                  backgroundColor: blocknoteTheme.colors.disabled.background,
                   border: "none",
-                  color: theme.colors.disabled.text,
+                  color: blocknoteTheme.colors.disabled.text,
                 },
               // Dropdown
               ".mantine-Menu-dropdown": {
@@ -326,11 +334,11 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
                   },
                 },
                 ".mantine-Menu-item:hover": {
-                  backgroundColor: theme.colors.hovered.background,
+                  backgroundColor: blocknoteTheme.colors.hovered.background,
                 },
               },
             },
-            theme.componentStyles?.(theme).Toolbar || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).Toolbar || {}
           ),
         }),
       },
@@ -338,11 +346,11 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
         styles: () => ({
           root: _.merge<CSSObject, CSSObject>(
             {
-              backgroundColor: theme.colors.menu.background,
+              backgroundColor: blocknoteTheme.colors.menu.background,
               border: border,
               borderRadius: outerBorderRadius,
               boxShadow: shadow,
-              color: theme.colors.menu.text,
+              color: blocknoteTheme.colors.menu.text,
               gap: "4px",
               minWidth: "145px",
               padding: "2px",
@@ -353,29 +361,30 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
                 ".mantine-TextInput-root, .mantine-FileInput-root": {
                   width: "300px",
                   ".mantine-TextInput-wrapper:hover": {
-                    backgroundColor: theme.colors.hovered.background,
+                    backgroundColor: blocknoteTheme.colors.hovered.background,
                   },
                   ".mantine-TextInput-wrapper, .mantine-FileInput-wrapper": {
                     padding: 0,
                     borderRadius: "4px",
                     ".mantine-FileInput-icon": {
-                      color: theme.colors.menu.text,
+                      color: blocknoteTheme.colors.menu.text,
                     },
                     ".mantine-TextInput-input, .mantine-FileInput-input": {
                       border: "none",
                       fontSize: "12px",
                       ".mantine-FileInput-placeholder": {
-                        color: theme.colors.menu.text,
+                        color: blocknoteTheme.colors.menu.text,
                       },
                     },
                     ".mantine-FileInput-input:hover": {
-                      backgroundColor: theme.colors.hovered.background,
+                      backgroundColor: blocknoteTheme.colors.hovered.background,
                     },
                   },
                 },
               },
             },
-            theme.componentStyles?.(theme).EditHyperlinkMenu || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme)
+              .EditHyperlinkMenu || {}
           ),
         }),
       },
@@ -383,18 +392,18 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
         styles: () => ({
           root: _.merge<CSSObject, CSSObject>(
             {
-              backgroundColor: theme.colors.tooltip.background,
+              backgroundColor: blocknoteTheme.colors.tooltip.background,
               border: border,
               borderRadius: outerBorderRadius,
               boxShadow: shadow,
-              color: theme.colors.tooltip.text,
+              color: blocknoteTheme.colors.tooltip.text,
               padding: "4px 10px",
               textAlign: "center",
               "div ~ div": {
-                color: theme.colors.tooltip.text,
+                color: blocknoteTheme.colors.tooltip.text,
               },
             },
-            theme.componentStyles?.(theme).Tooltip || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).Tooltip || {}
           ),
         }),
       },
@@ -406,9 +415,9 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
               ".mantine-Menu-item": {
                 // Icon
                 ".mantine-Menu-itemIcon": {
-                  backgroundColor: theme.colors.tooltip.background,
+                  backgroundColor: blocknoteTheme.colors.tooltip.background,
                   borderRadius: innerBorderRadius,
-                  color: theme.colors.tooltip.text,
+                  color: blocknoteTheme.colors.tooltip.text,
                   padding: "8px",
                 },
                 // Text
@@ -421,13 +430,13 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
                 // Badge (keyboard shortcut)
                 ".mantine-Menu-itemRightSection": {
                   ".mantine-Badge-root": {
-                    backgroundColor: theme.colors.tooltip.background,
-                    color: theme.colors.tooltip.text,
+                    backgroundColor: blocknoteTheme.colors.tooltip.background,
+                    color: blocknoteTheme.colors.tooltip.text,
                   },
                 },
               },
             },
-            theme.componentStyles?.(theme).SlashMenu || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).SlashMenu || {}
           ),
         }),
       },
@@ -438,18 +447,18 @@ export const blockNoteToMantineTheme = (theme: Theme): MantineThemeOverride => {
               backgroundColor: "transparent",
               ".mantine-UnstyledButton-root": {
                 backgroundColor: "transparent",
-                color: theme.colors.sideMenu,
+                color: blocknoteTheme.colors.sideMenu,
               },
               ".mantine-UnstyledButton-root:hover": {
-                backgroundColor: theme.colors.hovered.background,
+                backgroundColor: blocknoteTheme.colors.hovered.background,
               },
             },
-            theme.componentStyles?.(theme).SideMenu || {}
+            blocknoteTheme.componentStyles?.(blocknoteTheme).SideMenu || {}
           ),
         }),
       },
     },
-    fontFamily: theme.fontFamily,
+    fontFamily: blocknoteTheme.fontFamily,
     other: {
       textColors: textColors,
       backgroundColors: backgroundColors,

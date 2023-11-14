@@ -90,7 +90,6 @@ export function createReactBlockSpec<
     content: (blockConfig.containsInlineContent
       ? "inline*"
       : "") as ContainsInlineContent extends true ? "inline*" : "",
-    selectable: true,
 
     addAttributes() {
       return propsToAttributes(blockConfig);

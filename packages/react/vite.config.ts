@@ -11,8 +11,8 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "blocknote-react",
-      fileName: "blocknote-react",
+      name: "bocknoate-react",
+      fileName: "bocknoate-react",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

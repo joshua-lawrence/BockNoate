@@ -211,7 +211,7 @@ export default defineConfig({
       ) as DefaultTheme.AlgoliaSearchOptions,
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/TypeCellOS/BlockNote" },
+      { icon: "github", link: "https://github.com/velvetfs/BockNoate" },
       // { icon: "twitter", link: "https://twitter.com/TypeCellOS" },
       {
         icon: "discord",

@@ -1,4 +1,4 @@
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import { createButton } from "./util";
 
 export const addHyperlinkToolbar = (editor: BlockNoteEditor) => {

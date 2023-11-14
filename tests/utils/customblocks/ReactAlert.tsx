@@ -1,9 +1,9 @@
-import { defaultProps } from "@blocknote/core";
+import { defaultProps } from "bocknoate-core";
 import {
   createReactBlockSpec,
   InlineContent,
   ReactSlashMenuItem,
-} from "@blocknote/react";
+} from "bocknoate-react";
 import { useEffect, useState } from "react";
 import { RiAlertFill } from "react-icons/ri";
 

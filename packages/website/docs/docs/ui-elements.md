@@ -5,7 +5,6 @@ imageTitle: Changing UI Elements
 path: /docs/ui-elements
 ---
 
-
 <script setup>
 import { useData } from 'vitepress';
 import { getTheme, getStyles } from "../demoUtils";
@@ -56,7 +55,7 @@ In the following example, we remove the Side Menu from the editor. This is done 
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import {
   BlockNoteView,
   FormattingToolbarPositioner,
@@ -64,8 +63,8 @@ import {
   ImageToolbarPositioner,
   SlashMenuPositioner,
   useBlockNote,
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 export default function App() {
   // Creates a new editor instance.
@@ -98,7 +97,7 @@ In the following example, the Side Menu is replaced with a simple component whic
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import {
   BlockNoteView,
   FormattingToolbarPositioner,
@@ -107,8 +106,8 @@ import {
   SideMenuPositioner,
   SlashMenuPositioner,
   useBlockNote,
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 export default function App() {
   // Creates a new editor instance.
@@ -141,4 +140,3 @@ export default function App() {
 :::
 
 As you can see, this is done by passing a React component to the `sideMenu` prop of `SideMenuPositioner`. Each `Positioner` element has a prop through which you can pass the component you want to render (`formattingToolbar` for the Formatting Toolbar, etc.). If nothing is passed, the `Positioner` will render the default UI element.
-

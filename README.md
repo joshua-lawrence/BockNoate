@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.blocknotejs.org">
-    <img alt="TypeCell" src="https://github.com/TypeCellOS/BlockNote/raw/main/packages/website/docs/public/img/logos/banner.svg?raw=true" width="300" />
+    <img alt="TypeCell" src="https://github.com/velvetfs/BockNoate/raw/main/packages/website/docs/public/img/logos/banner.svg?raw=true" width="300" />
   </a>
 </p>
 
@@ -34,8 +34,8 @@ Play with the editor @ [https://blocknote-main.vercel.app/](https://blocknote-ma
 [![npm version](https://badge.fury.io/js/%40blocknote%2Freact.svg)](https://badge.fury.io/js/%40blocknote%2Freact)
 
 ```typescript
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
-import "@blocknote/core/style.css";
+import { BlockNoteView, useBlockNote } from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 function App() {
   const editor = useBlockNote({
@@ -49,9 +49,9 @@ function App() {
 }
 ```
 
-`@blocknote/react` comes with a fully styled UI that makes it an instant, polished editor ready to use in your app.
+`bocknoate-react` comes with a fully styled UI that makes it an instant, polished editor ready to use in your app.
 
-If you prefer to create your own UI components (menus), or don't want to use React, you can use `@blocknote/core` (_advanced_, [see docs](https://www.blocknotejs.org/docs/vanilla-js)).
+If you prefer to create your own UI components (menus), or don't want to use React, you can use `bocknoate-core` (_advanced_, [see docs](https://www.blocknotejs.org/docs/vanilla-js)).
 
 # Features
 
@@ -59,31 +59,31 @@ BlockNote comes with a number of features and components to make it easy to embe
 
 ### Animations:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/animations.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/animations.gif?raw=true" width="400" />
 
 ### Helpful placeholders:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/placeholders.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/placeholders.gif?raw=true" width="400" />
 
 ### Drag and drop blocks:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/dragdrop.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/dragdrop.gif?raw=true" width="400" />
 
 ### Nesting / indentation with tab and shift+tab:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/nesting.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/nesting.gif?raw=true" width="400" />
 
 ### Slash (/) menu:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/slashmenu.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/slashmenu.gif?raw=true" width="400" />
 
 ### Format menu:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/selectmenu.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/selectmenu.gif?raw=true" width="400" />
 
 ### Real-time collaboration:
 
-<img src="https://github.com/TypeCellOS/BlockNote/blob/readme/.resources/collaboration.gif?raw=true" width="400" />
+<img src="https://github.com/velvetfs/BockNoate/blob/readme/.resources/collaboration.gif?raw=true" width="400" />
 
 # Feedback 🙋‍♂️🙋‍♀️
 

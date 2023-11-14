@@ -1,6 +1,6 @@
 {
-  "name": "@blocknote/core",
-  "homepage": "https://github.com/TypeCellOS/BlockNote",
+  "name": "bocknoate-core",
+  "homepage": "https://github.com/velvetfs/BockNoate",
   "private": false,
   "license": "MPL-2.0",
   "version": "0.9.6",

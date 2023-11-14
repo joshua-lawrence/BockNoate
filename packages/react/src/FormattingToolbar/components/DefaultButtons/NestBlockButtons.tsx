@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { BlockNoteEditor, BlockSchema } from "@blocknote/core";
+import { BlockNoteEditor, BlockSchema } from "bocknoate-core";
 import { RiIndentDecrease, RiIndentIncrease } from "react-icons/ri";
 
 import { ToolbarButton } from "../../../SharedComponents/Toolbar/components/ToolbarButton";

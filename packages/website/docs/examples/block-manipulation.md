@@ -24,9 +24,9 @@ In this example, we create 4 buttons under the editor to manipulate the currentl
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import { BlockNoteEditor } from "@blocknote/core";
-import "@blocknote/core/style.css";
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
+import { BlockNoteEditor } from "bocknoate-core";
+import "bocknoate-core/style.css";
+import { BlockNoteView, useBlockNote } from "bocknoate-react";
 
 export default function App() {
   const editor: BlockNoteEditor = useBlockNote();

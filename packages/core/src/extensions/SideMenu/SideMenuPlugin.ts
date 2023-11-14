@@ -28,7 +28,7 @@ function getDraggableBlockFromCoords(
 ) {
   if (!view.dom.isConnected) {
     // view is not connected to the DOM, this can cause posAtCoords to fail
-    // (Cannot read properties of null (reading 'nearestDesc'), https://github.com/TypeCellOS/BlockNote/issues/123)
+    // (Cannot read properties of null (reading 'nearestDesc'), https://github.com/velvetfs/BockNoate/issues/123)
     return undefined;
   }
 

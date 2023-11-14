@@ -4,7 +4,7 @@ import {
   BlockSchema,
   defaultBlockSchema,
   DefaultBlockSchema,
-} from "@blocknote/core";
+} from "bocknoate-core";
 import { DependencyList, useMemo, useRef } from "react";
 import { getDefaultReactSlashMenuItems } from "../SlashMenu/defaultReactSlashMenuItems";
 

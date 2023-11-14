@@ -23,14 +23,14 @@ In this example, we override some of the default editor CSS to change the font.
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import "@blocknote/core/style.css";
+import "bocknoate-core/style.css";
 import {
   BlockNoteView,
   darkDefaultTheme,
   lightDefaultTheme,
   Theme,
   useBlockNote,
-} from "@blocknote/react";
+} from "bocknoate-react";
 
 const componentStyles = (theme: Theme) => ({
   Editor: {

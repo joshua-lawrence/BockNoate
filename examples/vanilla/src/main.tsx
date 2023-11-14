@@ -1,4 +1,4 @@
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import "./index.css";
 import { addSideMenu } from "./ui/addSideMenu";
 import { addFormattingToolbar } from "./ui/addFormattingToolbar";

@@ -1,4 +1,4 @@
-import { BlockSchema } from "@blocknote/core";
+import { BlockSchema } from "bocknoate-core";
 
 import { DragHandleMenu, DragHandleMenuProps } from "./DragHandleMenu";
 import { RemoveBlockButton } from "./DefaultButtons/RemoveBlockButton";

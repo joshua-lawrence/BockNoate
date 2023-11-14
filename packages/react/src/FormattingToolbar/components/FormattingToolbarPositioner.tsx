@@ -3,7 +3,7 @@ import {
   BlockSchema,
   DefaultBlockSchema,
   DefaultProps,
-} from "@blocknote/core";
+} from "bocknoate-core";
 import Tippy, { tippy } from "@tippyjs/react";
 import { FC, useEffect, useMemo, useRef, useState } from "react";
 import { sticky } from "tippy.js";

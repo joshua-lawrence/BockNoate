@@ -28,7 +28,7 @@ You can see how this is done in the example below, which has a custom Formatting
 
 ```typescript-vue /App.tsx
 import { useState } from "react";
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import {
   BlockNoteView,
   FormattingToolbarPositioner,
@@ -41,8 +41,8 @@ import {
   useBlockNote,
   useEditorContentChange,
   useEditorSelectionChange,
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 const CustomFormattingToolbar = (props: { editor: BlockNoteEditor }) => {
   // Tracks whether the text & background are both blue.
@@ -150,7 +150,7 @@ It might seem daunting to create your own Formatting Toolbar from scratch, which
 
 ### Default Components
 
-BlockNote exports all components used to create the default layout - both the toolbar itself and the items in it. Head to the [default Formatting Toolbar's source code](https://github.com/TypeCellOS/BlockNote/blob/main/packages/react/src/FormattingToolbar/components/DefaultFormattingToolbar.tsx) to see all the components that you can use.
+BlockNote exports all components used to create the default layout - both the toolbar itself and the items in it. Head to the [default Formatting Toolbar's source code](https://github.com/velvetfs/BockNoate/blob/main/packages/react/src/FormattingToolbar/components/DefaultFormattingToolbar.tsx) to see all the components that you can use.
 
 ### Custom Components
 
@@ -191,7 +191,7 @@ type ToolbarButtonProps = {
   isSelected?: boolean;
   // Whether the item should be clickable.
   isDisabled?: boolean;
-  // Child components, usually just the button text. If no children are 
+  // Child components, usually just the button text. If no children are
   // given, make sure to provide an icon.
   children?: any;
 };

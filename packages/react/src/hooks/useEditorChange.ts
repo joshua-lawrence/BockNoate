@@ -1,4 +1,4 @@
-import { BlockNoteEditor, BlockSchema } from "@blocknote/core";
+import { BlockNoteEditor, BlockSchema } from "bocknoate-core";
 import { useEditorContentChange } from "./useEditorContentChange";
 import { useEditorSelectionChange } from "./useEditorSelectionChange";
 

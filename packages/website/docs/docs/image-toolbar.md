@@ -38,9 +38,9 @@ You can use the provided `uploadToTempFilesOrg` function to as a starting point,
 import {
   BlockNoteEditor,
   uploadToTmpFilesDotOrg_DEV_ONLY,
-} from "@blocknote/core";
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-core";
+import { BlockNoteView, useBlockNote } from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 export default function App() {
   // Creates a new editor instance.

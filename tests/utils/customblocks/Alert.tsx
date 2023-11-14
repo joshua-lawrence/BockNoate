@@ -1,5 +1,5 @@
-import { createBlockSpec, defaultProps } from "@blocknote/core";
-import { ReactSlashMenuItem } from "@blocknote/react";
+import { createBlockSpec, defaultProps } from "bocknoate-core";
+import { ReactSlashMenuItem } from "bocknoate-react";
 import { RiAlertFill } from "react-icons/ri";
 
 const values = {

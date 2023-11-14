@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { Menu } from "@mantine/core";
-import { BlockNoteEditor, BlockSchema } from "@blocknote/core";
+import { BlockNoteEditor, BlockSchema } from "bocknoate-core";
 
 import { ToolbarButton } from "../../../SharedComponents/Toolbar/components/ToolbarButton";
 import { ColorIcon } from "../../../SharedComponents/ColorPicker/components/ColorIcon";

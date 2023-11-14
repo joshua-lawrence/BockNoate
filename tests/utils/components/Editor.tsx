@@ -1,10 +1,10 @@
-import { defaultBlockSchema } from "@blocknote/core";
-import "@blocknote/core/style.css";
+import { defaultBlockSchema } from "bocknoate-core";
+import "bocknoate-core/style.css";
 import {
   BlockNoteView,
   getDefaultReactSlashMenuItems,
   useBlockNote,
-} from "@blocknote/react";
+} from "bocknoate-react";
 import { Alert, insertAlert } from "../customblocks/Alert";
 import { Button, insertButton } from "../customblocks/Button";
 import { Embed, insertEmbed } from "../customblocks/Embed";

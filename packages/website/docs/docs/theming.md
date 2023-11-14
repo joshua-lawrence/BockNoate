@@ -25,15 +25,15 @@ Take a look at how this is done in the demo below:
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import {
   BlockNoteView,
   darkDefaultTheme,
   lightDefaultTheme,
   Theme,
   useBlockNote,
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 // Custom red light theme
 const lightRedTheme = {
@@ -125,9 +125,9 @@ In the demo below, we set a custom class on the `blockContainer` element to add 
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import { BlockNoteEditor } from "@blocknote/core";
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
-import "@blocknote/core/style.css";
+import { BlockNoteEditor } from "bocknoate-core";
+import { BlockNoteView, useBlockNote } from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 export default function App() {
   // Creates a new editor instance.
@@ -180,14 +180,14 @@ In the demo below, we use it to add some basic styling to the editor's default d
 ::: sandbox {template=react-ts}
 
 ```typescript-vue /App.tsx
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 import {
   BlockNoteView,
   darkDefaultTheme,
   Theme,
   useBlockNote,
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-react";
+import "bocknoate-core/style.css";
 
 // Default dark theme with additional component styles.
 const theme = {

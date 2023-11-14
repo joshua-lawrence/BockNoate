@@ -24,7 +24,7 @@ hero:
   #     link: /docs
   #   - theme: alt
   #     text: View on GitHub
-  #     link: https://github.com/TypeCellOS/BlockNote
+  #     link: https://github.com/velvetfs/BockNoate
 ---
 
 <script setup lang="ts">

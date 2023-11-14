@@ -109,10 +109,10 @@ type ImageBlock = {
   id: string;
   type: "image";
   props: {
-    url: string = "",
-    caption: string = "",
+    url: string = "";
+    caption: string = "";
     width: number = 512;
-  } & Omit<DefaultProps, "textAlignment">
+  } & Omit<DefaultProps, "textAlignment">;
   content: InlineContent[];
   children: Block[];
 };
@@ -155,7 +155,7 @@ import {
   DefaultBlockSchema,
   defaultBlockSchema,
   defaultProps,
-} from "@blocknote/core";
+} from "bocknoate-core";
 import {
   BlockNoteView,
   useBlockNote,
@@ -163,8 +163,8 @@ import {
   InlineContent,
   ReactSlashMenuItem,
   getDefaultReactSlashMenuItems,
-} from "@blocknote/react";
-import "@blocknote/core/style.css";
+} from "bocknoate-react";
+import "bocknoate-core/style.css";
 import { RiImage2Fill } from "react-icons/ri";
 
 export default function App() {

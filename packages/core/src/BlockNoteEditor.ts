@@ -57,7 +57,7 @@ export type BlockNoteEditorOptions<BSchema extends BlockSchema> = {
   enableBlockNoteExtensions: boolean;
   /**
    *
-   * (couldn't fix any type, see https://github.com/TypeCellOS/BlockNote/pull/191#discussion_r1210708771)
+   * (couldn't fix any type, see https://github.com/velvetfs/BockNoate/pull/191#discussion_r1210708771)
    *
    * @default defaultSlashMenuItems from `./extensions/SlashMenu`
    */

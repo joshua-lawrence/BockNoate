@@ -2,8 +2,8 @@ import {
   InlineContent,
   createReactBlockSpec,
   ReactSlashMenuItem,
-} from "@blocknote/react";
-import { BlockSchema, defaultProps } from "@blocknote/core";
+} from "bocknoate-react";
+import { BlockSchema, defaultProps } from "bocknoate-core";
 import { RiImage2Fill } from "react-icons/ri";
 
 export const ReactImage = createReactBlockSpec({

@@ -1,7 +1,7 @@
 import { AiOutlinePlus } from "react-icons/ai";
 import { SideMenuButton } from "../SideMenuButton";
 import { SideMenuProps } from "../SideMenuPositioner";
-import { BlockSchema } from "@blocknote/core";
+import { BlockSchema } from "bocknoate-core";
 
 export const AddBlockButton = <BSchema extends BlockSchema>(
   props: SideMenuProps<BSchema>

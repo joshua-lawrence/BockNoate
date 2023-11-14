@@ -49,7 +49,7 @@ defineProps<{
     </p>
     <div class="star">
       <GithubButton
-        href="https://github.com/TypeCellOS/BlockNote"
+        href="https://github.com/velvetfs/BockNoate"
         data-size="large"
         data-show-count="true"
         aria-label="Star TypeCellOS/BlockNote on GitHub"

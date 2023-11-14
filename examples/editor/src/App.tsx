@@ -1,8 +1,8 @@
 // import logo from './logo.svg'
-import "@blocknote/core/style.css";
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
+import "bocknoate-core/style.css";
+import { BlockNoteView, useBlockNote } from "bocknoate-react";
 import styles from "./App.module.css";
-import { uploadToTmpFilesDotOrg_DEV_ONLY } from "@blocknote/core";
+import { uploadToTmpFilesDotOrg_DEV_ONLY } from "bocknoate-core";
 
 type WindowWithProseMirror = Window & typeof globalThis & { ProseMirror: any };
 

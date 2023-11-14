@@ -4,7 +4,7 @@ import {
   BlockSchema,
   DefaultBlockSchema,
   SideMenuProsemirrorPlugin,
-} from "@blocknote/core";
+} from "bocknoate-core";
 import Tippy from "@tippyjs/react";
 import { FC, useEffect, useMemo, useRef, useState } from "react";
 

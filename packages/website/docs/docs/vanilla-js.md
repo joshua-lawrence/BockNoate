@@ -17,14 +17,14 @@ We recommend using BlockNote with React so you can use the built-in UI component
 
 ## Installing
 
-Instead of `@blocknote/react`, you'll need to install and use `@blocknote/core`.
+Instead of `bocknoate-react`, you'll need to install and use `bocknoate-core`.
 
 ## Creating an editor
 
 This is how to create a new BlockNote editor:
 
 ```
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "bocknoate-core";
 const editor = new BlockNoteEditor({
   element: document.getElementById("root")!, // element to append the editor to
   onUpdate: ({ editor }) => {
@@ -60,4 +60,4 @@ const editor = new BlockNoteEditor({
 
 ## Example
 
-For an example of a how to set up your custom UI factories, see the [Vanilla JS example](https://github.com/TypeCellOS/BlockNote/blob/main/examples/vanilla/) in the repository.
+For an example of a how to set up your custom UI factories, see the [Vanilla JS example](https://github.com/velvetfs/BockNoate/blob/main/examples/vanilla/) in the repository.

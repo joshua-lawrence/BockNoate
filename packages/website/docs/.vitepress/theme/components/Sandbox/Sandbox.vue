@@ -16,7 +16,7 @@
         }"
         :custom-setup="{
           ...props, // do not forget it
-          deps: { '@blocknote/react': 'latest', 'react-icons': 'latest' },
+          deps: { 'bocknoate-react': 'latest', 'react-icons': 'latest' },
         }"
         :code-options="codeOptions"
       >

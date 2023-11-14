@@ -3,7 +3,7 @@
   "homepage": "https://github.com/velvetfs/BockNoate",
   "private": false,
   "license": "MPL-2.0",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "files": [
     "dist",
     "types",
@@ -54,7 +54,7 @@
     "@tippyjs/react": "^4.2.6",
     "@tiptap/core": "^2.0.3",
     "@tiptap/react": "^2.0.3",
-    "bocknoate-core": "^0.9.7",
+    "bocknoate-core": "^0.9.9",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-icons": "^4.3.1",

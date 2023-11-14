@@ -45,7 +45,7 @@ function BaseBlockNoteView<BSchema extends BlockSchema>(
 export function BlockNoteView<BSchema extends BlockSchema>(
   props: {
     editor: BlockNoteEditor<BSchema>;
-    theme?:
+    blocknoteTheme?:
       | "light"
       | "dark"
       | BlocknoteTheme
@@ -57,29 +57,32 @@ export function BlockNoteView<BSchema extends BlockSchema>(
   } & HTMLAttributes<HTMLDivElement>
 ) {
   const {
-    theme = { light: lightDefaultTheme, dark: darkDefaultTheme },
+    blocknoteTheme = {
+      light: lightDefaultTheme,
+      dark: darkDefaultTheme,
+    },
     ...rest
   } = props;
 
   const preferredTheme = usePrefersColorScheme();
 
   const mantineTheme = useMemo(() => {
-    if (theme === "light") {
+    if (blocknoteTheme === "light") {
       return blockNoteToMantineTheme(lightDefaultTheme);
     }
 
-    if (theme === "dark") {
+    if (blocknoteTheme === "dark") {
       return blockNoteToMantineTheme(darkDefaultTheme);
     }
 
-    if ("light" in theme && "dark" in theme) {
+    if ("light" in blocknoteTheme && "dark" in blocknoteTheme) {
       return blockNoteToMantineTheme(
-        theme[preferredTheme === "dark" ? "dark" : "light"]
+        blocknoteTheme[preferredTheme === "dark" ? "dark" : "light"]
       );
     }
 
-    return blockNoteToMantineTheme(theme);
-  }, [preferredTheme, theme]);
+    return blockNoteToMantineTheme(blocknoteTheme);
+  }, [preferredTheme, blocknoteTheme]);
 
   return (
     <MantineProvider theme={mantineTheme}>

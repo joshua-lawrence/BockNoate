@@ -138,6 +138,7 @@ export function createReactBlockSpec<
         const blockContainer = tipTapEditor.state.doc.resolve(pos!).node();
         // Gets block identifier
         const blockIdentifier = blockContainer.attrs.id;
+        console.log(blockIdentifier);
         // Get the block
         const block = editor.getBlock(blockIdentifier)!;
         if (block.type !== blockConfig.type) {

@@ -59,7 +59,7 @@ export const FormattingToolbarPositioner = <
     tippy.setDefaultProps({ maxWidth: "" });
 
     return props.editor.formattingToolbar.onUpdate((state) => {
-      setShow(state.show);
+      setShow(false);
 
       referencePos.current = state.referencePos;
     });
@@ -101,7 +101,7 @@ export const FormattingToolbarPositioner = <
       appendTo={props.editor.domElement.parentElement!}
       content={formattingToolbarElement}
       getReferenceClientRect={getReferenceClientRect}
-      interactive={false}
+      interactive={true}
       visible={show}
       animation={"fade"}
       placement={placement}

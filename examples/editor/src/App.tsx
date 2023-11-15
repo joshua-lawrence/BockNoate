@@ -23,7 +23,7 @@ const CustomBlock = createReactBlockSpec({
       default: true,
     },
   },
-  render: ({ block, editor }) => {
+  render: ({ block }) => {
     return (
       <div
         style={{
@@ -32,6 +32,7 @@ const CustomBlock = createReactBlockSpec({
           borderRadius: "4px",
         }}>
         <p>Custom block</p>
+        <input></input>
         <input></input>
         <p>{block.props.hideToolbar}</p>
       </div>
@@ -57,7 +58,6 @@ const runAnalyst = (editor: BlockNoteEditor<typeof CustomSchema>) => {
       },
     ]
   );
-  editor.focus();
 };
 
 function App() {

@@ -3,7 +3,6 @@ import {
   BlockSchema,
   DefaultProps,
   PartialBlock,
-  defaultBlockSchema,
 } from "bocknoate-core";
 import { useCallback, useMemo } from "react";
 import { IconType } from "react-icons";
@@ -55,9 +54,7 @@ export const TextAlignButton = <BSchema extends BlockSchema>(props: {
     [props.editor, selectedBlocks]
   );
 
-  const show = useMemo(() => {
-    return false;
-  }, [selectedBlocks]);
+  const show = false;
 
   if (!show) {
     return null;

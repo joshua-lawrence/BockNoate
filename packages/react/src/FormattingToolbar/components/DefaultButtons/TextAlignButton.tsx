@@ -54,7 +54,9 @@ export const TextAlignButton = <BSchema extends BlockSchema>(props: {
     [props.editor, selectedBlocks]
   );
 
-  const show = false;
+  const show = useMemo(() => {
+    return !!selectedBlocks.find((block) => "textAlignment" in block.props);
+  }, [selectedBlocks]);
 
   if (!show) {
     return null;

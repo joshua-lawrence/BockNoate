@@ -144,12 +144,18 @@ export class FormattingToolbarView<BSchema extends BlockSchema> {
     const from = Math.min(...ranges.map((range) => range.$from.pos));
     const to = Math.max(...ranges.map((range) => range.$to.pos));
 
-    const shouldShow = this.shouldShow?.({
+    let shouldShow = this.shouldShow?.({
       view,
       state,
       from,
       to,
     });
+
+    const block = this.editor.getTextCursorPosition().block;
+    console.log(block);
+    if (block.props.hideToolbar) {
+      shouldShow = false;
+    }
 
     // Checks if menu should be shown/updated.
     if (

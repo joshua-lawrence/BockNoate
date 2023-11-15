@@ -145,7 +145,7 @@ export function blockToNode<BSchema extends BlockSchema>(
   }
 
   let contentNode: Node;
-
+  console.log(schema.nodes);
   if (!block.content) {
     contentNode = schema.nodes[type].create(block.props);
   } else if (typeof block.content === "string") {

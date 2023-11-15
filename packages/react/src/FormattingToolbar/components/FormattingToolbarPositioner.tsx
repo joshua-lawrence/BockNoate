@@ -59,7 +59,7 @@ export const FormattingToolbarPositioner = <
     tippy.setDefaultProps({ maxWidth: "" });
 
     return props.editor.formattingToolbar.onUpdate((state) => {
-      setShow(false);
+      setShow(state.show);
 
       referencePos.current = state.referencePos;
     });

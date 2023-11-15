@@ -14,6 +14,7 @@ export function insertBlocks<BSchema extends BlockSchema>(
   placement: "before" | "after" | "nested" = "before",
   editor: Editor
 ): void {
+  console.log("insertBlocks", blocksToInsert, referenceBlock, placement);
   const id =
     typeof referenceBlock === "string" ? referenceBlock : referenceBlock.id;
 

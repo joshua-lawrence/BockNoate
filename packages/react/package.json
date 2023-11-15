@@ -3,7 +3,7 @@
   "homepage": "https://github.com/velvetfs/BockNoate",
   "private": false,
   "license": "MPL-2.0",
-  "version": "0.9.13",
+  "version": "0.9.14",
   "files": [
     "dist",
     "types",
